@@ -17,6 +17,7 @@ class Artigo(models.Model):
     titulo = models.CharField(max_length=256)
     subtitulo = models.CharField(max_length=256)
     autor = models.ForeignKey(CustomUser, on_delete=models.PROTECT)
+    tags = models.TextField(blank=True,null=True)
     conteudo = models.TextField()
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
